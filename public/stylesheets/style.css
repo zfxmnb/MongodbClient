@@ -1,0 +1,127 @@
+*{
+	padding:0;
+	margin:0;
+	font-size:14px;
+}
+.db_list{
+	width:1000px;
+	margin:10px auto;
+}
+.db_list td{
+	padding:0 5px;
+	display: table-cell
+}
+.db_list .num{
+	width:5%;
+	text-align: center;
+	background:#eee;
+}
+.db_list .key{
+	width:10%
+}
+.db_list .value{
+	width:50%;
+}
+.db_list .options{
+	width:15%;
+	text-align: center;
+}
+.db_list button{
+	border:none;
+	padding:3px 5px;
+	margin:3px;
+	color:#fff;
+	background:#ff9933;
+	cursor:pointer;
+	border-radius:3px;
+}
+.db_list button.edit_btn{
+	background:#3399ff;
+}
+.db_list .remove{
+	width:8%;
+}
+.db_list .subtitle_key{
+	width:10%;
+	background:#eee;
+}
+.db_list .subtitle_value{
+	width:70%;
+	background:#eee;
+}
+.db_list .value div{
+	width:700px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.db_list .value div.unfold{
+	white-space:normal;
+}
+.condition{
+	width:1000px;
+	height:300px;
+	margin:0 auto;
+}
+.condition .left_con{
+	border:1px solid #ccc;
+	width:198px;
+	height:100%;
+	float:left;
+}
+.condition .left_con{
+
+}
+.condition .left_con>div{
+	margin:20px;
+}
+.condition .left_con input{
+	
+	border:1px solid #3399ff;
+	padding:5px;
+	border-radius:5px;
+}
+.condition .right_con{
+	border:1px solid #ccc;
+	width:798px;
+	height:100%;
+	float:left;
+	overflow: auto;
+}
+.inquire_1{
+	border:1px solid #ccc;
+	margin:5px;
+	padding:5px;
+}
+.inquire_1_value{
+	// border:1px solid #ccc;
+	// margin:5px;
+	// padding:5px;
+}
+.inquire_1{
+	overflow: hidden;
+}
+.inquire_1>div{
+	float:left;
+	margin:0 5px;
+	padding:5px;
+}
+.options{
+	margin:5px;
+	text-align: right
+}
+.condition .options button,.condition .right_con .remove,.condition .change{
+	border:none;
+	border-radius:5px;
+	padding:5px 8px;
+	background:#3399ff;
+	color:#fff;
+	cursor:pointer;
+	margin-left:10px;
+}
+.inquire_con{
+	margin:5px;
+}
+.inquire_con textarea{
+	width:100%;
+}

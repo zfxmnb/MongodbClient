@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MongoClient</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.cookie.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="condition">
+            <div class="left_con">
+                <div><h4>基本信息</h4></div>
+                <div>
+                    <div>集合</div>
+                    <input type="text" id="collection"  placeholder="<%= title%>数据库集合名">
+                </div>
+                <div>
+                    <div>用户</div>
+                    <input type="text" id="dbuser" placeholder="数据库用户">
+                </div>
+                <div>
+                    <div>密码</div>
+                    <input type="password" id="dbpwd"  placeholder="数据库密码">
+                </div>
+                <div>
+                    <button class="change">修改</button>
+                </div>
+            </div>
+            <div class="right_con">
+                    <div class="inquire_0">
+                        <div class="inquire_1">
+                            <div>key: <input type="text" class="key"></div>
+                            <div class="inquire_1_value">
+                                <div>value: <input class="value" type="text"></div>
+                            </div>
+                            <div>
+                                <select name="" class="type" id="">
+                                    <option value="">选择</option>
+                                    <option value="$gt">$gt</option>
+                                    <option value="$gte">$gte</option>
+                                    <option value="$lt">$lt</option>
+                                    <option value="$lte">$lte</option>
+                                    <option value="$regex">$regex</option>
+                                    <option value="$exists">$exists</option>
+                                    <option value="$size">$size</option>
+                                    <option value="$ne">$ne</option>
+                                    <option value="$in">$in</option>
+                                    <option value="$nin">$nin</option>
+                                    <option value="$all">$all</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <input type="text" id="sortobj" placeholder="排序">
+                        <select name="" id="sort" value="1">
+                            <option value="1">升序</option>
+                            <option value="-1">降序</option>
+                        </select>
+
+                        <select name="" id="limit" value="5">
+                            <option value="5">每页5条</option>
+                            <option value="10">每页10条</option>
+                            <option value="20">每页20条</option>
+                            <option value="50">每页50条</option>
+                        </select>
+
+                        <select name="" id="page" value="0">
+                            <option value="0">1页</option>
+                        </select>
+                        <select name="" id="type"> 
+                            <option value="">选择</option>
+                            <option value="$or">$or</option>
+                        </select>
+                        <button id="add">新增</button>
+                        <button id="submit">查询</button>
+                    </div>
+                    <div class="inquire_con"><textarea name="" disabled id="showInquire" cols="100" rows="2"></textarea><a href="http://tool.lu/json/" target="_blank">JSON工具</a></div>
+
+            </div>
+        </div>
+        <table class='db_list' border=1 cellspacing=0></table>
+    </div>
+    <textarea name="" id="template" style="display:none;" cols="30" rows="10">
+        <div class="inquire_1">
+            <div>key: <input type="text" class="key"></div>
+            <div class="inquire_1_value"><div>value: <input type="text" class="value"></div></div>
+            <div><select name="" id="" class="type">
+                    <option value="">选择</option>
+                    <option value="$gt">$gt</option>
+                    <option value="$gte">$gte</option>
+                    <option value="$lt">$lt</option>
+                    <option value="$lte">$lte</option>
+                    <option value="$regex">$regex</option>
+                    <option value="$exists">$exists</option>
+                    <option value="$ne">$ne</option>
+                    <option value="$in">$in</option>
+                    <option value="$nin">$nin</option>
+                </select><button class="remove">删除</button>
+            </div>
+        </div>
+    </textarea>
+  </body>
+  <script src="/javascripts/base.js"></script>
+</html>
