@@ -70,17 +70,19 @@
                             <option value="0">1页</option>
                         </select>
                         <select name="" id="type"> 
-                            <option value="">选择</option>
+                            <option value="">默认</option>
                             <option value="$or">$or</option>
                         </select>
-                        <button id="add">新增</button>
+                        <button id="add">添加条件</button>
+                        <button id="insert">插入数据</button>
                         <button id="submit">查询</button>
                     </div>
                     <div class="inquire_con"><textarea name="" disabled id="showInquire" cols="100" rows="2"></textarea><a href="http://tool.lu/json/" target="_blank">JSON工具</a></div>
 
             </div>
         </div>
-        <table class='db_list' border=1 cellspacing=0></table>
+        <div class='db_list'>
+        </div>
     </div>
     <textarea name="" id="template" style="display:none;" cols="30" rows="10">
         <div class="inquire_1">
@@ -102,5 +104,33 @@
         </div>
     </textarea>
   </body>
+  <div id="dialog_con">
+        <div id="addDialog" class="dialog">
+            <div class="title">增加</div>
+            <div class="con">
+                <label for="">key:</label><input type="text" class="key">
+                <label for="">value:</label><textarea class="value" rows="1"></textarea>
+            </div>
+            <div class="options"><a href="javascript:void(0);">close</a><button>确认</button></div>
+        </div>
+        <div id="emptyDialog" class="dialog">
+            <div class="title">清空</div>
+            <div class="con">是否清空当前<span class="key" style="font-size:18px; font-weight:600;padding:0 3px;"></span>的value</div>
+            <div class="options"><a href="javascript:void(0);">close</a><button>确认</button></div>
+        </div>
+        <div id="removeDialog" class="dialog">
+            <div class="title">删除</div>
+            <div class="con">是否删除整条数据</div>
+            <div class="options"><a href="javascript:void(0);">close</a><button>确认</button></div>
+        </div>
+        <div id="updateDialog" class="dialog">
+            <div class="title">修改</div>
+            <div class="con">
+                <label for="">key:</label><input type="text" class="key" disabled>
+                <label for="">value:</label><textarea class="value" rows="1"></textarea>
+            </div>
+            <div class="options"><a href="javascript:void(0);">close</a><button>确认</button></div>
+        </div>
+  </div>
   <script src="/javascripts/base.js"></script>
 </html>

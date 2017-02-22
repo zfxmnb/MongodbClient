@@ -3,9 +3,12 @@
 	margin:0;
 	font-size:14px;
 }
-.db_list{
+.db_list,#add_form{
 	width:1000px;
 	margin:10px auto;
+}
+#add_form{
+	text-align: center;
 }
 .db_list td{
 	padding:0 5px;
@@ -23,7 +26,7 @@
 	width:50%;
 }
 .db_list .options{
-	width:15%;
+	width:16%;
 	text-align: center;
 }
 .db_list button{
@@ -35,8 +38,18 @@
 	cursor:pointer;
 	border-radius:3px;
 }
-.db_list button.edit_btn{
+.db_list button.edit_btn,.db_list button.add_btn{
 	background:#3399ff;
+}
+#add_btn{
+	width:40%;
+	background:#3399ff;
+	border:none;
+	padding:3px 5px;
+	margin:3px;
+	color:#fff;
+	cursor:pointer;
+	border-radius:3px;
 }
 .db_list .remove{
 	width:8%;
@@ -76,7 +89,7 @@
 	margin:20px;
 }
 .condition .left_con input{
-	
+	width:160px;
 	border:1px solid #3399ff;
 	padding:5px;
 	border-radius:5px;
@@ -124,4 +137,63 @@
 }
 .inquire_con textarea{
 	width:100%;
+}
+.dialog{
+	width:250px;
+	background:#fff;
+	border-radius:10px;
+	box-shadow: 0 0 10px #3399ff;
+	position: fixed;
+	left:50%;
+	margin-left:-100px;
+	top:50%;
+	margin-top:-100px;
+	z-index:9999;
+	display:none;
+}
+.dialog .title{
+	border-bottom:1px solid #ddd;
+	hegiht:30px;
+	padding:0 10px;
+	line-height: 30px;
+	font-size:16px;
+}
+.dialog .con{
+	text-align:center;
+	padding:10px;
+}
+.dialog .con label{
+	display: inline-block;
+	width:40px;
+	margin:0 5px;
+	text-align: right;
+	vertical-align: top;
+    line-height: 35px;
+}
+.dialog .con input,.dialog .con textarea{
+	width:160px;
+	border:1px solid #3399ff;
+	padding:5px;
+	border-radius:5px;
+	margin:5px 0;
+	resize:vertical;
+}
+.dialog .options{
+	border-top:1px solid #ddd;
+	hegiht:35px;
+	padding:0 10px;
+	line-height: 35px;
+	margin:0;
+}
+.dialog .options button{
+	border:none;
+	border-radius:5px;
+	padding:5px 8px;
+	background:#ff9933;
+	color:#fff;
+	cursor:pointer;
+	margin-left:10px;
+}
+.dialog .options a{
+	color:#aaa;
 }
