@@ -137,6 +137,7 @@ function updateDialog(t,d,e,k,v){
 }
 
 function insert(){
+	$("#dbuser,#dbpwd").removeClass("err");
 	collection=$("#collection").val();user=$("#dbuser").val();pwd=$("#dbpwd").val();page=$("#page").val();limit=$("#limit").val();
 	if(!(collection!=""&&user!=""&&pwd!=""))
 		return false;
@@ -159,12 +160,17 @@ function insert(){
 		dataType:"json",
 		data:{collection:collection,user:user,pwd:pwd,type:"insert",condition:string},
 		success:function(docs){
-
+			if(docs.err){
+				if(docs.err.code==18)
+					$("#dbuser,#dbpwd").addClass("err");
+			}
 		}
 	})
 }
 
 function update(s,d,t){
+	$("#dbuser,#dbpwd").removeClass("err");
+	collection=$("#collection").val();user=$("#dbuser").val();pwd=$("#dbpwd").val();
 	$.ajax({
 		url:url,
 		type:"post",
@@ -173,19 +179,30 @@ function update(s,d,t){
 		success:function(docs){
 			if(docs.success)
 				$("#submit").trigger("click");
+			if(docs.err){
+				if(docs.err.code==18)
+					$("#dbuser,#dbpwd").addClass("err");
+			}
 		}
 
 	})
 }
 
 function remove(d,t){
+	$("#dbuser,#dbpwd").removeClass("err");
+	collection=$("#collection").val();user=$("#dbuser").val();pwd=$("#dbpwd").val();
 	$.ajax({
 		url:url,
 		type:"post",
 		dataType:"json",
 		data:{collection:collection,user:user,pwd:pwd,type:"remove",id:d},
 		success:function(docs){
-			t.remove();
+			if(docs.success)
+				t.remove();
+			if(docs.err){
+				if(docs.err.code==18)
+					$("#dbuser,#dbpwd").addClass("err");
+			}
 		}	
 	})
 }
@@ -263,6 +280,7 @@ function find(){
 }
 
 function data(s){
+	$("#dbuser,#dbpwd").removeClass("err");
 	$.ajax({
 		url:url,
 		type:"post",
@@ -290,6 +308,10 @@ function data(s){
 				}
 				$(".db_list").html(string);
 			}else{
+				if(docs.err){
+					if(docs.err.code==18)
+						$("#dbuser,#dbpwd").addClass("err");
+				}
 				$(".db_list").html("");
 			}
 		}

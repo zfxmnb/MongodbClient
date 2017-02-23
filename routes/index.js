@@ -30,9 +30,7 @@ router.post('/', function(req, res, next) {
 		    	if(err){
 		    		res.end(JSON.stringify({err:err}));
 		    		db.close();
-		    		console.log("err:"+err);
 		    	}else{
-				  	console.log("链接成功"+result);
 					db.collection(collection,function(err,collection){
 						if(err) throw err;
 			        	else{

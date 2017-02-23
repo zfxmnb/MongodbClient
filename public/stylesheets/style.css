@@ -12,7 +12,8 @@
 }
 .db_list td{
 	padding:0 5px;
-	display: table-cell
+	display: table-cell;
+	border: .5px solid #ddd;
 }
 .db_list .num{
 	width:5%;
@@ -31,12 +32,15 @@
 }
 .db_list button{
 	border:none;
-	padding:3px 5px;
+	padding:0 5px;
 	margin:3px;
 	color:#fff;
 	background:#ff9933;
 	cursor:pointer;
 	border-radius:3px;
+}
+.db_list .list{
+		border: 0.5px solid #ddd;
 }
 .db_list button.edit_btn,.db_list button.add_btn{
 	background:#3399ff;
@@ -196,4 +200,7 @@
 }
 .dialog .options a{
 	color:#aaa;
+}
+.left_con .err{
+	border-color:red !important;
 }
